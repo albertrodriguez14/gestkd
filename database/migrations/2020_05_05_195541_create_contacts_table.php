@@ -20,7 +20,7 @@ class CreateContactsTable extends Migration
             $table->unsignedBigInteger('Dni_id');
             $table->string('Dni_contacto', 100);
             $table->string('Direccion_contacto', 100)->nullable()->default('cartagena');
-            $table->string('Telefono_contacto', 100)->nullable()->default('300000000');
+            $table->string('Telefono_contacto', 100)->nullable()->default('0000000');
             $table->foreign('Dni_id')->references('id')->on('dnis')->onDelete('cascade');
             $table->timestamps();
         });
